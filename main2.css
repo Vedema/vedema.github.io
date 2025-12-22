@@ -1,0 +1,67 @@
+/* ===== Global ===== */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.highlight {
+    color: #13292a;
+}
+
+/* ===== Layout ===== */
+.jumbotron {
+    background: #2e6467;
+    color: #ebbea6;
+    text-shadow: 0.5px 0.5px 0px #ebbea6;
+}
+
+/* ===== Buttons ===== */
+.btn {
+    background: #ebbea6;
+    border-radius: 30px;
+    color: #13292a;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #5dcad1;
+    color: #13292a;
+}
+
+/* ===== Cards ===== */
+.project-row {
+    margin-top: 40px;
+}
+
+.card {
+    background: #13292a;
+    color: #5dcad1;
+}
+
+/* ===== Intro text ===== */
+.intro {
+    color: #13292a;
+}
+
+/* ===== Footer / Icons ===== */
+.socicons-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-top: 30px;
+}
+
+.socicons-list li {
+    margin: 10px;
+}
+
+.socicons-list li a {
+    font-size: 30px;
+    color: white;
+}
+
+/* ===== Copyright ===== */
+.copyright {
+    margin-top: 40px;
+    color: #13292a;
+}
