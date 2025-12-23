@@ -1,77 +1,192 @@
-/* ===== Global ===== */
-body {
+/* ====== Base look (your signature colours) ====== */
+.navbar .navbar-brand {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+}
+
+#home {
+    background-image: radial-gradient(circle at bottom, #ebbea6, #5dcad1);
     font-family: Arial, sans-serif;
+    line-height: 1.4;
+    border: 8px solid #ebbea6;
+    border-radius: 18px;
+    color: #ebbea6;
+    box-shadow: inset 0px 70px 15px 0px #13292a,
+        inset 0px -50px 15px 0px #13292a;
 }
 
 .highlight {
     color: #13292a;
 }
 
-/* ===== Layout ===== */
-.jumbotron {
-    background: #2e6467;
-    color: #ebbea6;
+/* ====== Hero polish ====== */
+.hero {
+    margin-top: 80px;
+    /* prevent navbar overlap */
+    border-radius: 18px;
     text-shadow: 0.5px 0.5px 0px #ebbea6;
+    background: #2e6467;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
 }
 
-/* ===== Buttons ===== */
+/* ====== Buttons (more modern feel) ====== */
 .btn {
+    border-radius: 50px 10px;
     background: #ebbea6;
-    border-radius: 30px;
+    border-color: #13292a;
     color: #13292a;
     font-weight: bold;
+    margin-top: 10px;
+    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, color 180ms ease;
 }
 
 .btn:hover {
-    background: #5dcad1;
+    background-color: #5dcad1;
+    color: #13292a;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ====== Layout spacing ====== */
+.project-row {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 40px;
+    row-gap: 22px;
+}
+
+.intro,
+.about {
     color: #13292a;
 }
 
-/* ===== Cards ===== */
-.project-row {
-    margin-top: 40px;
-}
-
-.card {
+/* ====== BEAUTIFUL CARDS ====== */
+.fancy-card {
+    border-radius: 22px !important;
+    overflow: hidden;
+    border: 1px solid rgba(235, 190, 166, 0.35);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
     background: #13292a;
     color: #5dcad1;
+    position: relative;
+    transition: transform 250ms ease, box-shadow 250ms ease, background 250ms ease, border-color 250ms ease;
 }
 
-/* ===== Intro text ===== */
-.intro {
+/* Glow layer */
+.fancy-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(93, 202, 209, 0.35), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(235, 190, 166, 0.25), transparent 55%);
+    opacity: 0;
+    transition: opacity 250ms ease;
+    pointer-events: none;
+}
+
+/* Hover effect */
+.fancy-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.35);
+    border-color: rgba(93, 202, 209, 0.65);
+    background: #0f2223;
+}
+
+.fancy-card:hover::before {
+    opacity: 1;
+}
+
+.card-title {
+    transition: transform 250ms ease, letter-spacing 250ms ease;
+}
+
+.fancy-card:hover .card-title {
+    transform: translateY(-2px);
+    letter-spacing: 0.5px;
+}
+
+/* ====== FORM polish + validation ====== */
+.form-div {
+    color: #5dcad1;
+    background: #13292a;
+    border-radius: 22px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(93, 202, 209, 0.35);
+    padding: 20px;
+}
+
+#form-btn {
+    background-color: #5dcad1;
+    border-color: #13292a;
+}
+
+#form-btn:hover {
+    background-color: #ebbea6;
     color: #13292a;
 }
 
-/* ===== Footer / Icons ===== */
+.form-control {
+    border-radius: 14px;
+    transition: box-shadow 200ms ease, border-color 200ms ease, transform 200ms ease;
+}
+
+.form-control:focus {
+    border-color: rgba(93, 202, 209, 0.85);
+    box-shadow: 0 0 0 0.2rem rgba(93, 202, 209, 0.25);
+    transform: translateY(-1px);
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 107, 0.25);
+}
+
+.was-validated .form-control:valid,
+.form-control.is-valid {
+    border-color: #51cf66;
+    box-shadow: 0 0 0 0.2rem rgba(81, 207, 102, 0.20);
+}
+
+/* ====== Footer icons ====== */
 .socicons-list {
     list-style: none;
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
     padding-left: 0;
-    margin-top: 30px;
 }
 
 .socicons-list li {
-    margin: 10px;
+    margin: 20px 10px 10px 10px;
 }
 
 .socicons-list li a {
+    text-decoration: none;
+    padding: 10px;
     font-size: 30px;
-    color: white;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #f1f1f1;
+    transition: all ease-in-out 150ms;
 }
 
-/* ===== Copyright ===== */
+.socicons-list li a:hover {
+    text-shadow: 0 5px 10px #13292a;
+    transform: translateY(-2px);
+}
+
+.socicons-list li:nth-child(1) a {
+    background-color: #AD5C51;
+}
+
+/* GitHub */
+.socicons-list li:nth-child(2) a {
+    background-color: #0077B5;
+}
+
+/* LinkedIn */
+
 .copyright {
-    margin-top: 40px;
     color: #13292a;
-}
-
-.card {
-    border: 2px solid rgba(235, 190, 166, 0.4);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    transition: 0.2s ease-in-out;
 }
