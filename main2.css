@@ -171,21 +171,30 @@ h2 {
 /* ===============================
    FOOTER / ICONS
 ================================ */
+/* Footer icons - force perfect circles */
 .socicons-list {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 18px;
     padding-left: 0;
-    margin-top: 40px;
+    margin: 30px 0 10px;
 }
 
 .socicons-list li a {
+    width: 46px;
+    height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
     font-size: 24px;
     color: #ffffff;
     background: #6366f1;
-    padding: 10px;
+
     border-radius: 50%;
+    text-decoration: none;
+
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -193,7 +202,6 @@ h2 {
     transform: translateY(-3px);
     box-shadow: 0 12px 25px rgba(99, 102, 241, 0.35);
 }
-
 /* ===============================
    COPYRIGHT
 ================================ */
