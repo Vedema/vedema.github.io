@@ -244,26 +244,11 @@ body#home .socicons-list li a:hover {
 }
 
 /* Brand colours (matches your screenshot) */
-body#home .socicons-list li:nth-child(1) a {
-    background: #AD5C51;
-}
+body#home .socicons-list li:nth-child(1) a { background: #AD5C51; } /* GitHub */
+body#home .socicons-list li:nth-child(2) a { background: #0077B5; } /* LinkedIn */
+body#home .socicons-list li:nth-child(3) a { background: #3E5B98; } /* Facebook */
+body#home .socicons-list li:nth-child(4) a { background: #1DA1F2; } /* Twitter */
 
-/* GitHub */
-body#home .socicons-list li:nth-child(2) a {
-    background: #0077B5;
-}
-
-/* LinkedIn */
-body#home .socicons-list li:nth-child(3) a {
-    background: #3E5B98;
-}
-
-/* Facebook */
-body#home .socicons-list li:nth-child(4) a {
-    background: #1DA1F2;
-}
-
-/* Twitter */
 
 /* ===============================
    COPYRIGHT
