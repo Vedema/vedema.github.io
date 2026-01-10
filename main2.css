@@ -58,38 +58,43 @@ body#home .highlight {
 /* ===============================
    BUTTONS
 ================================ */
+
+/* Base button shape for all buttons */
 body#home .btn {
     border-radius: 18px;
     padding: 12px 26px;
     font-weight: 600;
-    transition: all 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
 }
 
-/* Primary CTA */
-body#home .btn-primary {
-    background-color: #ff8a33;
-    border-color: #ff8a33;
+/* NEW: Your unified button style */
+body#home .custom-btn {
+    background: #ff8a33;
+    border: 2px solid #ff8a33;
     color: #243b4a;
+    border-radius: 999px;
+    /* pill button */
+    padding: 14px 34px;
+    /* slightly bigger for premium look */
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 0.2px;
 }
 
-body#home .btn-primary:hover {
-    background-color: #e67628;
+/* Hover: richer + lift */
+body#home .custom-btn:hover {
+    background: #e67628;
     border-color: #e67628;
+    color: #243b4a;
     transform: translateY(-2px);
-    box-shadow: 0 14px 30px rgba(255, 138, 51, 0.4);
+    box-shadow: 0 14px 30px rgba(255, 138, 51, 0.35);
+    text-decoration: none;
 }
 
-/* Outline button */
-body#home .btn-outline-light {
-    color: #215b5b;
-    border: 2px solid #215b5b;
-    background: transparent;
-}
-
-body#home .btn-outline-light:hover {
-    background: #215b5b;
-    color: #f3f7e6;
-    transform: translateY(-2px);
+/* Optional: focus accessibility */
+body#home .custom-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(255, 138, 51, 0.35);
 }
 
 /* ===============================
@@ -155,5 +160,58 @@ body#home .form-control:focus {
     box-shadow: 0 0 0 0.2rem rgba(255, 138, 51, 0.25);
 }
 
-/* Validation */
-body#home .was-validated .
+/* Validation (FIXED - your file was cut off) */
+body#home .was-validated .form-control:invalid,
+body#home .form-control.is-invalid {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 0.2rem rgba(239, 68, 68, 0.18);
+}
+
+body#home .was-validated .form-control:valid,
+body#home .form-control.is-valid {
+    border-color: #22c55e;
+    box-shadow: 0 0 0 0.2rem rgba(34, 197, 94, 0.16);
+}
+
+/* ===============================
+   SOCIAL ICONS (if you are using them)
+================================ */
+body#home .socicons-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    padding-left: 0;
+    margin: 35px 0 10px;
+}
+
+body#home .socicons-list li a {
+    width: 54px;
+    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+
+    background: #215b5b;
+    color: #f3f7e6;
+    font-size: 24px;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+body#home .socicons-list li a:hover {
+    transform: translateY(-3px);
+    background: #ff8a33;
+    box-shadow: 0 14px 28px rgba(36, 59, 74, 0.18);
+}
+
+/* ===============================
+   COPYRIGHT
+================================ */
+body#home .copyright {
+    color: rgba(36, 59, 74, 0.75);
+    margin-top: 28px;
+    font-size: 0.95rem;
+}
