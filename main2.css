@@ -1,212 +1,159 @@
-/* ===============================
-   GLOBAL BASE
-================================ */
-* {
-    box-sizing: border-box;
-}
+/* =================================
+   MAIN PAGE ONLY (Scoped)
+   Applies ONLY to body#home
+================================= */
 
-body {
+body#home {
+    background: #f3f7e6;
+    color: #243b4a;
     font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
-    background: #f8fafc;
-    color: #0f172a;
     line-height: 1.6;
-}
-
-#home {
-    background: #f8fafc;
 }
 
 /* ===============================
    NAVBAR
 ================================ */
-.navbar {
-    background: #0f172a !important;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+body#home .navbar {
+    background: #215b5b !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
-.navbar-brand,
-.navbar-nav .nav-link {
-    color: #f8fafc !important;
+body#home .navbar-brand,
+body#home .navbar-nav .nav-link {
+    color: #f3f7e6 !important;
     font-weight: 500;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #c7d2fe !important;
+body#home .navbar-nav .nav-link:hover {
+    color: #ff8a33 !important;
 }
 
 /* ===============================
    HERO / JUMBOTRON
 ================================ */
-.hero {
-    background: linear-gradient(135deg, #eef2ff, #f8fafc);
-    border-radius: 22px;
+body#home .hero {
+    background: #f3f7e6;
+    border-radius: 26px;
     margin-top: 90px;
     padding: 80px 25px;
-    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 28px 60px rgba(36, 59, 74, 0.15);
 }
 
-.hero h1 {
-    color: #0f172a;
+body#home .hero h1 {
+    color: #243b4a;
     font-weight: 700;
 }
 
-.hero .lead {
-    color: #475569;
-    max-width: 700px;
+body#home .hero .lead {
+    color: #215b5b;
+    max-width: 720px;
     margin: 0 auto;
 }
 
 /* Highlight name */
-.highlight {
-    color: #6366f1;
+body#home .highlight {
+    color: #ff8a33;
 }
 
 /* ===============================
    BUTTONS
 ================================ */
-.btn {
-    border-radius: 14px;
-    padding: 10px 24px;
+body#home .btn {
+    border-radius: 18px;
+    padding: 12px 26px;
     font-weight: 600;
     transition: all 0.25s ease;
 }
 
-.btn-primary {
-    background-color: #6366f1;
-    border-color: #6366f1;
+/* Primary CTA */
+body#home .btn-primary {
+    background-color: #ff8a33;
+    border-color: #ff8a33;
+    color: #243b4a;
 }
 
-.btn-primary:hover {
-    background-color: #4f46e5;
-    border-color: #4f46e5;
+body#home .btn-primary:hover {
+    background-color: #e67628;
+    border-color: #e67628;
     transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 14px 30px rgba(255, 138, 51, 0.4);
 }
 
-.btn-outline-light {
-    color: #6366f1;
-    border: 2px solid #6366f1;
+/* Outline button */
+body#home .btn-outline-light {
+    color: #215b5b;
+    border: 2px solid #215b5b;
     background: transparent;
 }
 
-.btn-outline-light:hover {
-    background: #6366f1;
-    color: #ffffff;
+body#home .btn-outline-light:hover {
+    background: #215b5b;
+    color: #f3f7e6;
     transform: translateY(-2px);
 }
 
 /* ===============================
    SECTIONS
 ================================ */
-h2 {
+body#home h2 {
     font-weight: 700;
-    margin-bottom: 10px;
-    color: #0f172a;
+    color: #243b4a;
 }
 
-.intro {
-    color: #475569;
+body#home .intro {
+    color: #215b5b;
 }
 
 /* ===============================
    PORTFOLIO CARDS
 ================================ */
-.project-row {
+body#home .project-row {
     margin-top: 45px;
-    row-gap: 28px;
+    row-gap: 30px;
 }
 
-.fancy-card {
+body#home .fancy-card {
     background: #ffffff;
-    border-radius: 22px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+    border-radius: 26px;
+    border: 1px solid rgba(36, 59, 74, 0.15);
+    box-shadow: 0 16px 40px rgba(36, 59, 74, 0.12);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.fancy-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 28px 65px rgba(15, 23, 42, 0.15);
+body#home .fancy-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 32px 70px rgba(36, 59, 74, 0.25);
 }
 
-.fancy-card .card-title {
+body#home .fancy-card .card-title {
     font-weight: 600;
-    color: #0f172a;
+    color: #243b4a;
 }
 
-.fancy-card .card-text {
-    color: #475569;
+body#home .fancy-card .card-text {
+    color: #215b5b;
 }
 
 /* ===============================
    CONTACT FORM
 ================================ */
-.form-div {
+body#home .form-div {
     background: #ffffff;
-    border-radius: 22px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
+    border-radius: 26px;
+    border: 1px solid rgba(36, 59, 74, 0.15);
+    box-shadow: 0 28px 65px rgba(36, 59, 74, 0.18);
     padding: 30px;
 }
 
-.form-control {
-    border-radius: 12px;
-    border: 1px solid #cbd5f5;
+body#home .form-control {
+    border-radius: 14px;
+    border: 1px solid rgba(36, 59, 74, 0.25);
 }
 
-.form-control:focus {
-    border-color: #6366f1;
-    box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.25);
+body#home .form-control:focus {
+    border-color: #ff8a33;
+    box-shadow: 0 0 0 0.2rem rgba(255, 138, 51, 0.25);
 }
 
 /* Validation */
-.was-validated .form-control:invalid {
-    border-color: #ef4444;
-}
-
-.was-validated .form-control:valid {
-    border-color: #22c55e;
-}
-
-/* ===============================
-   FOOTER / ICONS
-================================ */
-/* Footer icons - force perfect circles */
-.socicons-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    padding-left: 0;
-    margin: 30px 0 10px;
-}
-
-.socicons-list li a {
-    width: 46px;
-    height: 46px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 24px;
-    color: #ffffff;
-    background: #6366f1;
-
-    border-radius: 50%;
-    text-decoration: none;
-
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.socicons-list li a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(99, 102, 241, 0.35);
-}
-/* ===============================
-   COPYRIGHT
-================================ */
-.copyright {
-    color: #64748b;
-    margin-top: 35px;
-    font-size: 0.9rem;
-}
+body#home .was-validated .
