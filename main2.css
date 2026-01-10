@@ -1,51 +1,64 @@
 /* ===============================
    GLOBAL BASE
 ================================ */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
-    background: #f7f9fc;
-    color: #1f2933;
+    background: #f8fafc;
+    color: #0f172a;
     line-height: 1.6;
 }
 
 #home {
-    background: #f7f9fc;
+    background: #f8fafc;
 }
 
 /* ===============================
    NAVBAR
 ================================ */
 .navbar {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    background: #0f172a !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
 }
 
-.navbar-brand {
-    font-weight: 600;
-    letter-spacing: 0.3px;
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #f8fafc !important;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #c7d2fe !important;
 }
 
 /* ===============================
    HERO / JUMBOTRON
 ================================ */
 .hero {
-    background: linear-gradient(135deg, #eef2ff, #f7f9fc);
-    border-radius: 20px;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    border-radius: 22px;
     margin-top: 90px;
-    padding: 70px 20px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+    padding: 80px 25px;
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
 }
 
 .hero h1 {
-    color: #1f2933;
+    color: #0f172a;
+    font-weight: 700;
 }
 
 .hero .lead {
-    color: #4b5563;
+    color: #475569;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* Highlight name */
 .highlight {
-    color: #2563eb;
+    color: #6366f1;
 }
 
 /* ===============================
@@ -53,75 +66,76 @@ body {
 ================================ */
 .btn {
     border-radius: 14px;
-    padding: 10px 22px;
+    padding: 10px 24px;
     font-weight: 600;
     transition: all 0.25s ease;
 }
 
 .btn-primary {
-    background-color: #2563eb;
-    border-color: #2563eb;
+    background-color: #6366f1;
+    border-color: #6366f1;
 }
 
 .btn-primary:hover {
-    background-color: #1e40af;
-    border-color: #1e40af;
+    background-color: #4f46e5;
+    border-color: #4f46e5;
     transform: translateY(-2px);
-    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.25);
+    box-shadow: 0 12px 28px rgba(99, 102, 241, 0.3);
 }
 
 .btn-outline-light {
-    color: #2563eb;
-    border: 2px solid #2563eb;
+    color: #6366f1;
+    border: 2px solid #6366f1;
     background: transparent;
 }
 
 .btn-outline-light:hover {
-    background: #2563eb;
+    background: #6366f1;
     color: #ffffff;
     transform: translateY(-2px);
 }
 
 /* ===============================
-   SECTION TEXT
+   SECTIONS
 ================================ */
 h2 {
     font-weight: 700;
     margin-bottom: 10px;
+    color: #0f172a;
 }
 
 .intro {
-    color: #4b5563;
+    color: #475569;
 }
 
 /* ===============================
-   CARDS (PORTFOLIO AREAS)
+   PORTFOLIO CARDS
 ================================ */
 .project-row {
-    margin-top: 40px;
+    margin-top: 45px;
     row-gap: 28px;
 }
 
 .fancy-card {
     background: #ffffff;
     border-radius: 22px;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .fancy-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 28px 65px rgba(15, 23, 42, 0.15);
 }
 
 .fancy-card .card-title {
     font-weight: 600;
-    color: #1f2933;
+    color: #0f172a;
 }
 
 .fancy-card .card-text {
-    color: #4b5563;
+    color: #475569;
 }
 
 /* ===============================
@@ -130,21 +144,22 @@ h2 {
 .form-div {
     background: #ffffff;
     border-radius: 22px;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
     padding: 30px;
 }
 
 .form-control {
     border-radius: 12px;
-    border: 1px solid #d1d5db;
+    border: 1px solid #cbd5f5;
 }
 
 .form-control:focus {
-    border-color: #2563eb;
-    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.2);
+    border-color: #6366f1;
+    box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.25);
 }
 
+/* Validation */
 .was-validated .form-control:invalid {
     border-color: #ef4444;
 }
@@ -160,28 +175,30 @@ h2 {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 18px;
     padding-left: 0;
+    margin-top: 40px;
 }
 
 .socicons-list li a {
-    font-size: 26px;
+    font-size: 24px;
     color: #ffffff;
-    background: #2563eb;
+    background: #6366f1;
     padding: 10px;
     border-radius: 50%;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .socicons-list li a:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 12px 25px rgba(99, 102, 241, 0.35);
 }
 
 /* ===============================
    COPYRIGHT
 ================================ */
 .copyright {
-    color: #6b7280;
-    margin-top: 40px;
+    color: #64748b;
+    margin-top: 35px;
+    font-size: 0.9rem;
 }
